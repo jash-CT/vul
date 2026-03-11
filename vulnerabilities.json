@@ -1,0 +1,62 @@
+[
+  {
+    "id": "VULN-001",
+    "type": "IDOR",
+    "severity": "High",
+    "file": "apps/admin/models.py",
+    "line": 14,
+    "description": "Missing authorization check on object access",
+    "exploit": "?user_id=2",
+    "fix": "Verify object ownership"
+  },
+  {
+    "id": "VULN-002",
+    "type": "IDOR",
+    "severity": "High",
+    "file": "apps/admin/serializers.py",
+    "line": 22,
+    "description": "Missing authorization check on object access",
+    "exploit": "?user_id=2",
+    "fix": "Verify object ownership"
+  },
+  {
+    "id": "VULN-003",
+    "type": "IDOR",
+    "severity": "High",
+    "file": "apps/admin/views.py",
+    "line": 36,
+    "description": "Missing authorization check on object access",
+    "exploit": "?user_id=2",
+    "fix": "Verify object ownership"
+  },
+  {
+    "id": "VULN-004",
+    "type": "IDOR",
+    "severity": "High",
+    "file": "apps/admin/urls.py",
+    "line": 8,
+    "description": "Missing authorization check on object access",
+    "exploit": "?user_id=2",
+    "fix": "Verify object ownership"
+  },
+  {
+    "id": "VULN-005",
+    "type": "Command Injection",
+    "severity": "Critical",
+    "file": "apps/upload/models.py",
+    "line": 10,
+    "description": "User input passed directly to system command",
+    "exploit": "8.8.8.8; rm -rf /",
+    "fix": "Use subprocess with allowlist"
+  },
+  {
+    "id": "VULN-006",
+    "type": "Command Injection",
+    "severity": "Critical",
+    "file": "apps/upload/serializers.py",
+    "line": 8,
+    "description": "User input passed directly to system command",
+    "exploit": "8.8.8.8; rm -rf /",
+    "fix": "Use subprocess with allowlist"
+  }
+]
